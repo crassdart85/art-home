@@ -1,0 +1,39 @@
+:root {
+  /* Luxury Palette */
+  --primary-gold: #C5A065; 
+  --primary-black: #000000;
+  --text-grey: #666666;
+  --bg-light: #F9F9F9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--primary-black);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Reset for Next.js Image wrapper */
+img {
+  max-width: 100%;
+  height: auto;
+}
