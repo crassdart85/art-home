@@ -16,9 +16,10 @@ export default function Home() {
         zIndex: 100,
         borderBottom: '1px solid #333'
       }}>
-        {/* LOGO */}
+        {/* LOGO AREA */}
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <a href="/">
+            {/* Make sure site-logo.jpg is in your public folder */}
             <Image 
               src="/site-logo.jpg" 
               alt="Art Home Logo" 
@@ -33,15 +34,16 @@ export default function Home() {
         {/* MENU LINKS */}
         <div style={{ display: 'flex', gap: '30px', fontWeight: '500', alignItems: 'center' }}>
           <a href="/" style={{ color: '#C5A065', fontWeight: 'bold' }}>Home</a>
-          <a href="/about" style={{ color: '#ffffff' }}>About</a>
-          <a href="/contracting" style={{ color: '#ffffff' }}>Construction</a>
-          <a href="/contact" style={{ color: '#ffffff' }}>Contact</a>
+          <a href="/about" style={{ color: '#ffffff', transition: 'color 0.3s' }}>About</a>
+          <a href="/contracting" style={{ color: '#ffffff', transition: 'color 0.3s' }}>Construction</a>
+          <a href="/contact" style={{ color: '#ffffff', transition: 'color 0.3s' }}>Contact</a>
           <a href="/ar" style={{ 
             padding: '8px 20px', 
             border: '1px solid #C5A065', 
             color: '#C5A065', 
             borderRadius: '2px', 
-            fontSize: '0.9rem' 
+            fontSize: '0.9rem',
+            fontWeight: 'bold'
           }}>عربي</a>
         </div>
       </nav>
@@ -53,7 +55,7 @@ export default function Home() {
         flexDirection: "column",
         alignItems: "center", 
         justifyContent: "center", 
-        // Construction site background
+        // Background Image: Massive Construction Site
         background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541976544-2f67263534d0?auto=format&fit=crop&w=1920')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -61,10 +63,24 @@ export default function Home() {
         textAlign: "center",
         padding: "0 20px"
       }}>
-        <h1 style={{ fontSize: "4.5rem", marginBottom: "15px", fontWeight: "800", textTransform: "uppercase", letterSpacing: "2px", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>
+        <h1 style={{ 
+          fontSize: "4.5rem", 
+          marginBottom: "15px", 
+          fontWeight: "800", 
+          textTransform: "uppercase", 
+          letterSpacing: "2px", 
+          textShadow: "0 2px 10px rgba(0,0,0,0.5)" 
+        }}>
           Building <span style={{ color: "#C5A065" }}>Excellence</span>
         </h1>
-        <p style={{ fontSize: "1.3rem", maxWidth: "700px", lineHeight: "1.6", color: "#f0f0f0", marginBottom: "40px", textShadow: "0 2px 5px rgba(0,0,0,0.5)" }}>
+        <p style={{ 
+          fontSize: "1.3rem", 
+          maxWidth: "700px", 
+          lineHeight: "1.6", 
+          color: "#f0f0f0", 
+          marginBottom: "40px", 
+          textShadow: "0 2px 5px rgba(0,0,0,0.5)" 
+        }}>
           From massive infrastructure to luxury fit-outs. We turn ambitious blueprints into operational business assets.
         </p>
         <a href="/contracting" style={{ 
@@ -92,7 +108,8 @@ export default function Home() {
                     position: "relative",
                     borderRadius: "2px",
                     overflow: "hidden",
-                    boxShadow: "20px 20px 0px #f4f4f4" // Architectural offset shadow
+                    // Architectural offset shadow effect
+                    boxShadow: "20px 20px 0px #f4f4f4"
                 }}>
                     <Image 
                         src="/gm-photo.jpg" 
@@ -118,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. BUSINESS CASES (3 Column Grid) */}
+      {/* 3. EXPERTISE GRID */}
       <section style={{ padding: "80px 50px", background: "#f9f9f9" }}>
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
           <h2 style={{ fontSize: "2.5rem", color: "#111", textTransform: "uppercase", letterSpacing: "1px" }}>Our Expertise</h2>

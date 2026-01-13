@@ -1,97 +1,139 @@
 import Image from "next/image";
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 
 export default function Contact() {
   return (
     <main>
-      <Navbar activePage="contact" />
+      {/* 0. NAVIGATION BAR */}
+      <nav style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        padding: '15px 50px', 
+        background: '#000000', 
+        alignItems: 'center', 
+        boxShadow: '0 2px 15px rgba(0,0,0,0.5)', 
+        position: 'sticky', 
+        top: 0, 
+        zIndex: 100,
+        borderBottom: '1px solid #333'
+      }}>
+        {/* LOGO AREA */}
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="/">
+            <Image 
+              src="/site-logo.jpg" 
+              alt="Art Home Logo" 
+              width={140} 
+              height={70} 
+              style={{ objectFit: 'contain' }} 
+              priority 
+            />
+          </a>
+        </div>
+        
+        {/* MENU LINKS */}
+        <div style={{ display: 'flex', gap: '30px', fontWeight: '500', alignItems: 'center' }}>
+          <a href="/" style={{ color: '#ffffff', transition: 'color 0.3s' }}>Home</a>
+          <a href="/about" style={{ color: '#ffffff', transition: 'color 0.3s' }}>About</a>
+          <a href="/contracting" style={{ color: '#ffffff', transition: 'color 0.3s' }}>Construction</a>
+          <a href="/contact" style={{ color: '#C5A065', fontWeight: 'bold' }}>Contact</a>
+          <a href="/ar" style={{ 
+            padding: '8px 20px', 
+            border: '1px solid #C5A065', 
+            color: '#C5A065', 
+            borderRadius: '2px', 
+            fontSize: '0.9rem',
+            fontWeight: 'bold'
+          }}>عربي</a>
+        </div>
+      </nav>
 
       {/* 1. HERO SECTION */}
-      <section className="hero-section" style={{ height: '40vh', background: '#111' }}>
-        <div className="hero-content">
-            <h1>Corporate Contact</h1>
-            <p className="text-gold">
-            Strategic Partnerships & Project Inquiries
-            </p>
-        </div>
+      <section style={{ 
+        height: "40vh", 
+        display: "flex", 
+        flexDirection: "column",
+        alignItems: "center", 
+        justifyContent: "center", 
+        background: "#111",
+        color: "#fff",
+        textAlign: "center",
+        padding: "0 20px"
+      }}>
+        <h1 style={{ 
+          fontSize: "3rem", 
+          marginBottom: "10px", 
+          fontWeight: "800", 
+          textTransform: "uppercase", 
+          letterSpacing: "2px"
+        }}>
+          CORPORATE CONTACT
+        </h1>
+        <p style={{ 
+          fontSize: "1.2rem", 
+          color: "#C5A065" 
+        }}>
+          Strategic Partnerships
+        </p>
       </section>
 
-      {/* 2. CONTACT GRID */}
-      <section className="contact-section">
-        <div className="container contact-grid">
+      {/* 2. CONTENT GRID */}
+      <section style={{ padding: "100px 50px", background: "white" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "flex-start" }}>
             
-            {/* Left Side: HQ Details */}
-            <div className="contact-details">
-                <h2 style={{ fontSize: "2rem", color: "#1a1a1a", marginBottom: "30px" }}>Headquarters</h2>
-                
-                {/* Cairo Office */}
-                <div className="contact-office">
-                    <h3 className="office-title">
-                        <span className="flag" style={{marginRight: '10px'}}>🇪🇬</span> Egypt HQ
-                    </h3>
-                    <p className="contact-text">
-                        <strong>Address:</strong><br/>
-                        20 Al-Kods Al-Shreef Street,<br/>
-                        Mohandseen, Cairo, Egypt
-                    </p>
-                    <p className="contact-text" style={{ marginTop: "10px" }}>
-                        <strong>Tel:</strong> +20 233459690<br/>
-                        <strong>P.O. Box:</strong> 12655
+            {/* Left Column: Headquarters */}
+            <div>
+                <div style={{ marginBottom: "40px" }}>
+                    <h3 style={{ fontSize: "1.5rem", color: "#C5A065", marginBottom: "15px" }}>Egypt HQ</h3>
+                    <p style={{ fontSize: "1.1rem", color: "#555", lineHeight: "1.8" }}>
+                        Mohandseen, Cairo
                     </p>
                 </div>
-
-                {/* China Office */}
-                <div className="contact-office">
-                    <h3 className="office-title">
-                        <span className="flag" style={{marginRight: '10px'}}>🇨🇳</span> China Office
-                    </h3>
-                    <p className="contact-text">
-                        <strong>Address:</strong><br/>
-                        Room 608, West Point Center,<br/>
-                        Building No. 65, Zhongshan 7 Road,<br/>
-                        Guangzhou, China
-                    </p>
-                    <p className="contact-text" style={{ marginTop: "10px" }}>
-                        <strong>Tel:</strong> +86-02081686833
+                <div>
+                    <h3 style={{ fontSize: "1.5rem", color: "#C5A065", marginBottom: "15px" }}>China Office</h3>
+                    <p style={{ fontSize: "1.1rem", color: "#555", lineHeight: "1.8" }}>
+                        Guangzhou
                     </p>
                 </div>
             </div>
 
-            {/* Right Side: Corporate Form */}
-            <div className="card" style={{textAlign: 'left'}}>
-                <h3 style={{ marginBottom: "20px", color: "#1a1a1a" }}>Business Inquiry</h3>
-                <form className="form-grid">
-                    <div className="form-field">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="John Doe" style={{textAlign: 'left'}} />
-                    </div>
-                    <div className="form-field">
-                        <label>Corporate Email</label>
-                        <input type="email" placeholder="name@company.com" style={{textAlign: 'left'}}/>
-                    </div>
-                    <div className="form-field">
-                        <label>Department</label>
-                        <select style={{textAlign: 'left'}}>
-                            <option>Project Tendering (Construction)</option>
-                            <option>Fit-Out Request</option>
-                            <option>Material Export (Mining)</option>
-                            <option>Partnership Proposal</option>
-                        </select>
-                    </div>
-                    <div className="form-field">
-                        <label>Project Details</label>
-                        <textarea rows={4} placeholder="Please provide project scope or requirements..." style={{textAlign: 'left'}}></textarea>
-                    </div>
-                    <button type="button" className="btn-primary">
-                        Submit Proposal
+            {/* Right Column: Form */}
+            <div style={{ background: "#F9F9F9", padding: "40px", borderRadius: "2px" }}>
+                <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    <input 
+                        type="text" 
+                        placeholder="Name" 
+                        style={{ padding: '15px', border: '1px solid #ddd', borderRadius: '2px', fontSize: '1rem' }} 
+                    />
+                    <input 
+                        type="email" 
+                        placeholder="Corporate Email" 
+                        style={{ padding: '15px', border: '1px solid #ddd', borderRadius: '2px', fontSize: '1rem' }} 
+                    />
+                    <textarea 
+                        rows={5} 
+                        placeholder="Message" 
+                        style={{ padding: '15px', border: '1px solid #ddd', borderRadius: '2px', fontSize: '1rem', resize: 'vertical' }}
+                    ></textarea>
+                    <button 
+                        type="submit" 
+                        style={{ 
+                            background: '#C5A065', 
+                            color: 'black', 
+                            padding: '18px', 
+                            border: 'none', 
+                            fontWeight: 'bold', 
+                            cursor: 'pointer', 
+                            fontSize: '1rem', 
+                            textTransform: 'uppercase',
+                            borderRadius: '2px'
+                        }}
+                    >
+                        Submit
                     </button>
                 </form>
             </div>
-
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

@@ -1,39 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  /* Luxury Palette */
+  /* Art Home Luxury Palette */
   --primary-gold: #C5A065; 
   --primary-black: #000000;
+  --text-dark: #111111;
   --text-grey: #666666;
-  --bg-light: #F9F9F9;
+  --bg-light: #FFFFFF;
+  --bg-off-white: #F9F9F9;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-light);
-  color: var(--primary-black);
+  color: var(--text-dark);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden; /* Prevents horizontal scrollbar */
 }
 
-/* Typography Utilities */
-h1, h2, h3, h4 {
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   font-weight: 700;
   line-height: 1.2;
+}
+
+p {
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Reset for Next.js Image wrapper */
+/* Image Reset for Next.js */
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+/* Utility: Gold Text Selection */
+::selection {
+  background: var(--primary-gold);
+  color: black;
 }

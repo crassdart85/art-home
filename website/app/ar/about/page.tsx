@@ -1,25 +1,30 @@
 import Image from "next/image";
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 
 export default function ArabicAbout() {
   return (
-    <main dir="rtl" className="page-rtl">
-      <Navbar locale="ar" activePage="about" />
-
-      {/* 1. HERO SECTION - STABILITY */}
-      <section className="hero-section" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920')"}}>
-        <div className="hero-content" style={{textAlign: 'right'}}>
-          <h1>استقرار استراتيجي</h1>
-          <p className="text-gold">
-            عقود من الخبرة في تسليم المشاريع الكبرى عبر الشرق الأوسط وأفريقيا.
-          </p>
+    <main dir="rtl" style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '15px 50px', background: '#000000', alignItems: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.5)', position: 'sticky', top: 0, zIndex: 100, borderBottom: '1px solid #333' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <a href="/ar"><Image src="/site-logo.jpg" alt="Art Home Logo" width={140} height={70} style={{ objectFit: 'contain' }} priority /></a>
         </div>
+        <div style={{ display: 'flex', gap: '30px', fontWeight: '500', alignItems: 'center' }}>
+          <a href="/ar" style={{ color: '#C5A065', fontWeight: 'bold' }}>الرئيسية</a>
+          <a href="/ar/about" style={{ color: '#ffffff' }}>من نحن</a>
+          <a href="/ar/contracting" style={{ color: '#ffffff' }}>المشاريع</a>
+          <a href="/ar/contact" style={{ color: '#ffffff' }}>اتصل بنا</a>
+          <a href="/about" style={{ padding: '8px 20px', border: '1px solid #C5A065', color: '#C5A065', borderRadius: '2px', fontSize: '0.9rem', fontWeight: 'bold' }}>English</a>
+        </div>
+      </nav>
+
+      {/* 1. HERO */}
+      <section style={{ height: "60vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920')", backgroundSize: "cover", color: "#fff", textAlign: "center" }}>
+        <h1 style={{ fontSize: "3.5rem", marginBottom: "10px", color: "#fff" }}>استقرار استراتيجي</h1>
+        <p style={{ fontSize: "1.2rem", color: "#C5A065", maxWidth: "600px" }}>عقود من الخبرة في تسليم المشاريع الكبرى.</p>
       </section>
 
-      {/* 2. HISTORY (Zig Zag) */}
-      <section className="about-section">
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+      {/* 2. HISTORY */}
+      <section style={{ padding: "100px 50px", maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
             <div style={{ textAlign: "right" }}>
                 <h2 style={{ fontSize: "2.5rem", color: "#111", marginBottom: "30px" }}>تاريخنا</h2>
                 <p style={{ fontSize: "1.1rem", lineHeight: "1.8", color: "#555", marginBottom: "20px" }}>
@@ -35,15 +40,15 @@ export default function ArabicAbout() {
         </div>
       </section>
 
-      {/* 3. LEADERSHIP SECTION */}
-      <section className="about-section" style={{ background: "#f9f9f9" }}>
-        <div className="container" style={{ textAlign: "center" }}>
+      {/* 3. LEADERSHIP (GM Photo) */}
+      <section style={{ padding: "100px 50px", background: "#f9f9f9" }}>
+        <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center" }}>
             <h2 style={{ fontSize: "2.5rem", color: "#111", marginBottom: "60px" }}>القيادة</h2>
             
             <div style={{ background: "white", padding: "40px", borderRadius: "2px", boxShadow: "0 10px 30px rgba(0,0,0,0.05)", display: "inline-block", textAlign: "right" }}>
                 <div style={{ display: "flex", gap: "40px", alignItems: "center", flexWrap: "wrap", flexDirection: "row-reverse" }}>
                     <div style={{ position: "relative", width: "200px", height: "200px", borderRadius: "50%", overflow: "hidden", border: "4px solid #C5A065" }}>
-                         <Image src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800" alt="Eng. Ashraf El-Kady" fill style={{ objectFit: "cover" }} />
+                         <Image src="/gm-photo.jpg" alt="Eng. Ashraf El-Kady" fill style={{ objectFit: "cover" }} />
                     </div>
                     <div style={{ maxWidth: "500px" }}>
                         <h3 style={{ fontSize: "1.8rem", color: "#111", marginBottom: "5px" }}>م. أشرف القاضي</h3>
@@ -56,7 +61,6 @@ export default function ArabicAbout() {
             </div>
         </div>
       </section>
-      <Footer locale="ar" />
     </main>
   );
 }

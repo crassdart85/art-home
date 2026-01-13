@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 
 export default function RealEstate() {
   return (
     <main>
-        <Navbar activePage="real-estate" />
+
 
       {/* 1. HERO SECTION */}
       <section className="hero-section" style={{ 

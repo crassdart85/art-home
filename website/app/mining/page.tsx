@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 
 export default function Industrial() {
   return (
     <main>
-      <Navbar activePage="mining" />
+
 
       {/* 1. HERO SECTION - SUPPLY CHAIN CONTROL */}
       <section className="hero-section" style={{height: '60vh', backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1575550959108-28a7f8998505?auto=format&fit=crop&w=1920')"}}>
