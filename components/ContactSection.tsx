@@ -2,9 +2,14 @@
 
 import { Phone, MapPin } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import { useState } from 'react';
 
 export default function ContactSection() {
   const { language } = useLanguage();
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [projectDetails, setProjectDetails] = useState('');
 
   const content = {
     en: {
@@ -25,11 +30,18 @@ export default function ContactSection() {
       china: "مكتب الصين",
       phone: "الهاتف",
       sendMsg: "أرسل لنا رسالة",
-      btn: "إرسال الرسالة"
+      btn: "إرسال الرسالة",
+      egyptAddress: "20 شارع القدس - المهندسين- القاهرة"
     }
   };
 
   const t = content[language];
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:info@arthome.com.eg?subject=New Project Inquiry from ${firstName} ${lastName}&body=Name: ${firstName} ${lastName}%0D%0AEmail: ${email}%0D%0AProject Details: ${projectDetails}`;
+    window.location.href = mailtoLink;
+  };
 
   return (
     <section id="contact" className="bg-slate-900 text-white py-24">
@@ -56,7 +68,9 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-1">{t.egypt}</h4>
-                  <p className="text-slate-400">20 Al-Kods Al-Shreef Street,<br />Mohandseen, Cairo</p>
+                  <p className="text-slate-400" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+                    {language === 'ar' ? t.egyptAddress : "20 Al-Kods Al-Shreef Street,<br />Mohandseen, Cairo"}
+                  </p>
                 </div>
               </div>
 
@@ -78,7 +92,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-1">{t.phone}</h4>
-                  <p className="text-slate-400">+20 233459690</p>
+                  <p className="text-slate-400" dir="ltr">+20 233459690</p>
                 </div>
               </div>
             </div>
@@ -87,29 +101,29 @@ export default function ContactSection() {
           {/* Simple Form */}
           <div className="bg-white p-8 md:p-12 rounded-sm text-slate-900">
             <h3 className="text-2xl font-bold mb-6">{t.sendMsg}</h3>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-slate-600">First Name</label>
-                  <input type="text" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
+                  <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-slate-600">Last Name</label>
-                  <input type="text" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
+                  <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-600">Email Address</label>
-                <input type="email" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-600">Project Details</label>
-                <textarea rows={4} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
+                <textarea rows={4} value={projectDetails} onChange={(e) => setProjectDetails(e.target.value)} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
               </div>
 
-              <button type="button" className="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-bold tracking-wide uppercase transition-all rounded-sm shadow-lg">
+              <button type="submit" className="w-full py-4 bg-amber-600 hover:bg-amber-700 text-white font-bold tracking-wide uppercase transition-all rounded-sm shadow-lg">
                 {t.btn}
               </button>
             </form>

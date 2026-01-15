@@ -28,7 +28,7 @@ export default function AboutSection() {
           name: "Col. Dr. Eng. Amr Ahmed Elbasiony",
           role: "Executive Director ",
           img: "/exeMD.png",
-          phone: "+20 122 253 3269",
+           
           email: "amr.elbasiony@arthome.com.eg",
           quals: [
             "Doctorate of Business Administration (DBA) – AASTMT – Smart Village, Egypt",
@@ -60,8 +60,7 @@ export default function AboutSection() {
           name: "عقيد دكتور مهندس / عمرو أحمد بسيوني",
           role: "الرئيس التنفيذي",
           img: "/exeMD.png",
-          phone: "+20 122 253 3269",
-          email: "amr.elbasiony@arthome.com.eg",
+           email: "amr.elbasiony@arthome.com.eg",
           quals: [
             "دكتوراه في إدارة الأعمال (DBA) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري – القرية الذكية، مصر",
             "ماجستير في إدارة الأعمال – إدارة الجودة (MQM) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري",
