@@ -21,19 +21,19 @@ export default function AboutSection() {
       v3: "Precision", v3d: "Executing projects with accuracy.",
       v4: "Commitment", v4d: "Dedicated to meeting client expectations.",
       
-      // Board Section
+      // Board Section (English)
       boardTitle: "Board of Directors",
       boardMembers: [
         {
           name: "Col. Dr. Eng. Amr Ahmed Elbasiony",
-          role: "Executive Manager",
+          role: "Executive Director ",
           img: "/exeMD.png",
           phone: "+20 122 253 3269",
           email: "amr.elbasiony@arthome.com.eg",
           quals: [
-            "Doctorate of Business Administration (DBA) – AASTMT",
-            "Master Degree in Business Administration (MQM) – AASTMT",
-            "Bachelor of Science in Nuclear and Chemical Engineering – MTC",
+            "Doctorate of Business Administration (DBA) – AASTMT – Smart Village, Egypt",
+            "Master Degree in Business Administration – Quality Management (MQM) – AASTMT",
+            "Bachelor of Science in Nuclear and Chemical Engineering – Military Technical College, Cairo",
             "Bachelor of Military Sciences"
           ]
         }
@@ -53,19 +53,19 @@ export default function AboutSection() {
       v3: "الدقة", v3d: "تنفيذ المشاريع بدقة متناهية.",
       v4: "الالتزام", v4d: "مكرسون لتلبية توقعات العملاء.",
       
-      // Board Section Arabic
+      // Board Section (Arabic) - Precise Translation
       boardTitle: "مجلس الإدارة",
       boardMembers: [
         {
           name: "عقيد دكتور مهندس / عمرو أحمد بسيوني",
-          role: "مدير إدارة الجودة الشاملة (TQM)",
-          img: "/exeMD.jpg",
+          role: "الرئيس التنفيذي",
+          img: "/exeMD.png",
           phone: "+20 122 253 3269",
           email: "amr.elbasiony@arthome.com.eg",
           quals: [
-            "دكتوراه في إدارة الأعمال (DBA) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري",
-            "ماجستير في إدارة الجودة (MQM) – الأكاديمية العربية",
-            "بكالوريوس الهندسة النووية والكيميائية – الكلية الفنية العسكرية",
+            "دكتوراه في إدارة الأعمال (DBA) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري – القرية الذكية، مصر",
+            "ماجستير في إدارة الأعمال – إدارة الجودة (MQM) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري",
+            "بكالوريوس الهندسة النووية والكيميائية – الكلية الفنية العسكرية – القاهرة، مصر",
             "بكالوريوس العلوم العسكرية"
           ]
         }
@@ -92,7 +92,7 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Board of Directors Section (NEW) */}
+        {/* Board of Directors Section */}
         <div className="mb-24">
           <h3 className="text-3xl font-bold text-slate-900 mb-12 text-center border-b border-slate-200 pb-4 inline-block mx-auto min-w-[300px] block">
             {t.boardTitle}
@@ -103,11 +103,10 @@ export default function AboutSection() {
               <div key={index} className="bg-slate-50 rounded-sm overflow-hidden shadow-sm border border-slate-100 flex flex-col md:flex-row">
                 {/* Image Section */}
                 <div className="md:w-1/3 relative h-96 md:h-auto">
-                   {/* Using standard img for simplicity with local files */}
                    <img 
                     src={member.img} 
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top" // object-top helps frame headshots better
                    />
                 </div>
 
@@ -116,7 +115,7 @@ export default function AboutSection() {
                   <span className="text-amber-600 font-bold tracking-wider uppercase text-sm mb-2">
                     {member.role}
                   </span>
-                  <h4 className="text-3xl font-bold text-slate-900 mb-6">
+                  <h4 className="text-3xl font-bold text-slate-900 mb-6 leading-relaxed">
                     {member.name}
                   </h4>
 
@@ -182,31 +181,26 @@ export default function AboutSection() {
         <div>
           <h3 className="text-2xl font-bold text-slate-900 mb-10 text-center">{t.valuesTitle}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* ... Values remain the same ... */}
             <div className="text-center p-6 hover:bg-slate-50 transition-colors rounded-sm">
               <Gem className="mx-auto text-amber-600 mb-4" size={40} />
               <h4 className="font-bold text-lg mb-2">{t.v1}</h4>
               <p className="text-sm text-slate-500">{t.v1d}</p>
             </div>
-
             <div className="text-center p-6 hover:bg-slate-50 transition-colors rounded-sm">
               <ShieldCheck className="mx-auto text-amber-600 mb-4" size={40} />
               <h4 className="font-bold text-lg mb-2">{t.v2}</h4>
               <p className="text-sm text-slate-500">{t.v2d}</p>
             </div>
-
             <div className="text-center p-6 hover:bg-slate-50 transition-colors rounded-sm">
               <Ruler className="mx-auto text-amber-600 mb-4" size={40} />
               <h4 className="font-bold text-lg mb-2">{t.v3}</h4>
               <p className="text-sm text-slate-500">{t.v3d}</p>
             </div>
-
             <div className="text-center p-6 hover:bg-slate-50 transition-colors rounded-sm">
               <Users className="mx-auto text-amber-600 mb-4" size={40} />
               <h4 className="font-bold text-lg mb-2">{t.v4}</h4>
               <p className="text-sm text-slate-500">{t.v4d}</p>
             </div>
-
           </div>
         </div>
 
