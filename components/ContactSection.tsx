@@ -47,7 +47,7 @@ export default function ContactSection() {
     <section id="contact" className="bg-slate-900 text-white py-24">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           {/* Contact Info */}
           <div>
             <h3 className="text-amber-500 font-bold tracking-widest uppercase mb-4">
@@ -69,7 +69,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="text-xl font-bold mb-1">{t.egypt}</h4>
                   <p className="text-slate-400" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-                    {language === 'ar' ? t.egyptAddress : "20 Al-Kods Al-Shreef Street,<br />Mohandseen, Cairo"}
+                    {(language === 'ar' && 'egyptAddress' in t) ? t.egyptAddress : "20 Al-Kods Al-Shreef Street,<br />Mohandseen, Cairo"}
                   </p>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function ContactSection() {
                   <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-600">Email Address</label>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 outline-none focus:border-amber-500 rounded-sm" />

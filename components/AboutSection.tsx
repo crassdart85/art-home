@@ -20,21 +20,21 @@ export default function AboutSection() {
       v2: "Integrity", v2d: "Building trust through transparency.",
       v3: "Precision", v3d: "Executing projects with accuracy.",
       v4: "Commitment", v4d: "Dedicated to meeting client expectations.",
-      
+
       // Board Section (English)
       boardTitle: "Board of Directors",
       boardMembers: [
         {
-          name: "Col. Dr. Eng. Amr Ahmed Elbasiony",
+          name: "Dr. Eng. Amr Ahmed Elbasiony",
           role: "Executive Director ",
           img: "/exeMD.png",
-           
+          phone: "",
+
           email: "amr.elbasiony@arthome.com.eg",
           quals: [
             "Doctorate of Business Administration (DBA) – AASTMT – Smart Village, Egypt",
             "Master Degree in Business Administration – Quality Management (MQM) – AASTMT",
-            "Bachelor of Science in Nuclear and Chemical Engineering – Military Technical College, Cairo",
-            "Bachelor of Military Sciences"
+
           ]
         }
       ]
@@ -52,20 +52,19 @@ export default function AboutSection() {
       v2: "النزاهة", v2d: "بناء الثقة من خلال الشفافية.",
       v3: "الدقة", v3d: "تنفيذ المشاريع بدقة متناهية.",
       v4: "الالتزام", v4d: "مكرسون لتلبية توقعات العملاء.",
-      
+
       // Board Section (Arabic) - Precise Translation
       boardTitle: "مجلس الإدارة",
       boardMembers: [
         {
-          name: "عقيد دكتور مهندس / عمرو أحمد بسيوني",
+          name: "دكتور مهندس / عمرو أحمد بسيوني",
           role: "الرئيس التنفيذي",
           img: "/exeMD.png",
-           email: "amr.elbasiony@arthome.com.eg",
+          phone: "",
+          email: "amr.elbasiony@arthome.com.eg",
           quals: [
             "دكتوراه في إدارة الأعمال (DBA) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري – القرية الذكية، مصر",
-            "ماجستير في إدارة الأعمال – إدارة الجودة (MQM) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري",
-            "بكالوريوس الهندسة النووية والكيميائية – الكلية الفنية العسكرية – القاهرة، مصر",
-            "بكالوريوس العلوم العسكرية"
+            "ماجستير في إدارة الأعمال – إدارة الجودة (MQM) – الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري"
           ]
         }
       ]
@@ -77,7 +76,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        
+
         {/* Intro Text */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h3 className="text-amber-600 font-bold tracking-widest uppercase mb-3">
@@ -96,17 +95,17 @@ export default function AboutSection() {
           <h3 className="text-3xl font-bold text-slate-900 mb-12 text-center border-b border-slate-200 pb-4 inline-block mx-auto min-w-[300px] block">
             {t.boardTitle}
           </h3>
-          
+
           <div className="grid grid-cols-1 gap-12">
             {t.boardMembers.map((member, index) => (
               <div key={index} className="bg-slate-50 rounded-sm overflow-hidden shadow-sm border border-slate-100 flex flex-col md:flex-row">
                 {/* Image Section */}
                 <div className="md:w-1/3 relative h-96 md:h-auto">
-                   <img 
-                    src={member.img} 
+                  <img
+                    src={member.img}
                     alt={member.name}
                     className="w-full h-full object-cover object-top" // object-top helps frame headshots better
-                   />
+                  />
                 </div>
 
                 {/* Content Section */}
@@ -120,10 +119,12 @@ export default function AboutSection() {
 
                   {/* Contact Info */}
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-8 text-slate-600 text-sm">
-                    <div className="flex items-center gap-2">
-                      <Phone size={16} className="text-amber-500" />
-                      <span dir="ltr">{member.phone}</span>
-                    </div>
+                    {member.phone && (
+                      <div className="flex items-center gap-2">
+                        <Phone size={16} className="text-amber-500" />
+                        <span dir="ltr">{member.phone}</span>
+                      </div>
+                    )}
                     <div className="flex items-center gap-2">
                       <Mail size={16} className="text-amber-500" />
                       <span>{member.email}</span>
