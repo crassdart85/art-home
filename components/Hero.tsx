@@ -33,7 +33,7 @@ export default function Hero() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transform hover:scale-105 transition-transform duration-[10000ms]"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('/projects/coronado.jpg')" }}
       >
         {/* Dark Overlay for Text Readability */}
         <div className="absolute inset-0 bg-slate-900/40"></div>
