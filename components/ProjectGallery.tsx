@@ -3,37 +3,39 @@
 import { useState, useEffect } from 'react'; // <--- Added useEffect here
 import { MapPin, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import SnapshotsModal from './SnapshotsModal';
 
 
 export default function ProjectGallery() {
   const { language } = useLanguage();
-  
+
   // Define content for both languages
   const content = {
     en: {
       sub: "Selected Works",
       title: "Featured Projects",
-      btn: "View All Projects",
+      btn: "View More Projects",
       filters: ['All', 'Hospitality', 'Residential', 'Education', 'Commercial']
     },
     ar: {
       sub: "أعمال مختارة",
       title: "مشاريع مميزة",
-      btn: "عرض جميع المشاريع",
+      btn: "عرض مشاريع اخرى",
       filters: ['الكل', 'ضيافة', 'سكنية', 'تعليمية', 'تجارية']
     }
   };
 
   const t = content[language];
   const [activeFilter, setActiveFilter] = useState(t.filters[0]);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   // Sync active filter when language changes to avoid mismatch
   useEffect(() => {
     const currentIndex = content[language === 'en' ? 'ar' : 'en'].filters.indexOf(activeFilter);
     if (currentIndex !== -1) {
-       setActiveFilter(t.filters[currentIndex]);
+      setActiveFilter(t.filters[currentIndex]);
     } else {
-       setActiveFilter(t.filters[0]);
+      setActiveFilter(t.filters[0]);
     }
   }, [language]);
 
@@ -42,18 +44,18 @@ export default function ProjectGallery() {
       title: { en: 'Coronado North Coast', ar: 'كورونادو الساحل الشمالي' },
       category: { en: 'Residential', ar: 'سكنية' }, // Simplified category for filtering
       location: { en: 'Alex-Matrouh Road, Egypt', ar: 'طريق إسكندرية مطروح، مصر' },
-      description: { 
-        en: '164km coastal development featuring premium chalets and landscape integration.', 
+      description: {
+        en: '164km coastal development featuring premium chalets and landscape integration.',
         ar: 'تطوير ساحلي على مساحة 164 كم يضم شاليهات فاخرة وتصميمات طبيعية.'
       },
-      image: '/projects/coronado.jpg', 
+      image: '/projects/coronado.jpg',
     },
     {
       title: { en: 'Aquarius Resort', ar: 'منتجع أكواريوس' },
       category: { en: 'Hospitality', ar: 'ضيافة' },
       location: { en: 'Ain Sokhna, Egypt', ar: 'العين السخنة، مصر' },
-      description: { 
-        en: '5-star hotel with 200 rooms, 650 villas, and commercial complexes.', 
+      description: {
+        en: '5-star hotel with 200 rooms, 650 villas, and commercial complexes.',
         ar: 'فندق 5 نجوم يضم 200 غرفة و 650 فيلا ومجمعات تجارية.'
       },
       image: '/projects/aquarius.jpg',
@@ -62,8 +64,8 @@ export default function ProjectGallery() {
       title: { en: 'Sabah Al-Salem University', ar: 'جامعة صباح السالم' },
       category: { en: 'Education', ar: 'تعليمية' },
       location: { en: 'Kuwait', ar: 'الكويت' },
-      description: { 
-        en: 'Complete fit-out and lecture hall acoustics for the university city.', 
+      description: {
+        en: 'Complete fit-out and lecture hall acoustics for the university city.',
         ar: 'تجهيز كامل وحلول صوتية لقاعات المحاضرات في المدينة الجامعية.'
       },
       image: '/projects/university.jpg',
@@ -72,8 +74,8 @@ export default function ProjectGallery() {
       title: { en: 'Administrative Capital Bank', ar: 'بنك العاصمة الإدارية' },
       category: { en: 'Commercial', ar: 'تجارية' },
       location: { en: 'New Capital, Egypt', ar: 'العاصمة الإدارية الجديدة، مصر' },
-      description: { 
-        en: 'High-end wooden cladding and executive office interiors.', 
+      description: {
+        en: 'High-end wooden cladding and executive office interiors.',
         ar: 'تكسية خشبية راقية وتصميمات داخلية للمكاتب التنفيذية.'
       },
       image: '/projects/bank.jpg',
@@ -83,7 +85,7 @@ export default function ProjectGallery() {
   return (
     <section id="projects" className="py-24 bg-slate-50">
       <div className="container mx-auto px-6">
-        
+
         {/* Header & Filter */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-xl">
@@ -94,18 +96,17 @@ export default function ProjectGallery() {
               {t.title}
             </h2>
           </div>
-          
+
           {/* Filter Tabs */}
           <div className="flex flex-wrap gap-2">
             {t.filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-all ${
-                  activeFilter === filter
-                    ? 'bg-slate-900 text-white'
-                    : 'bg-white text-slate-500 hover:bg-slate-200'
-                }`}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all ${activeFilter === filter
+                  ? 'bg-slate-900 text-white'
+                  : 'bg-white text-slate-500 hover:bg-slate-200'
+                  }`}
               >
                 {filter}
               </button>
@@ -125,23 +126,23 @@ export default function ProjectGallery() {
             // Simple filter logic: Check if "All" is selected OR if the category matches the filter
             // We compare English indices to ensure logic works regardless of language display
             const filterIndex = t.filters.indexOf(activeFilter);
-            const categoryMatches = filterIndex === 0 || 
+            const categoryMatches = filterIndex === 0 ||
               (filterIndex === 1 && project.category.en === 'Hospitality') ||
               (filterIndex === 2 && project.category.en === 'Residential') ||
               (filterIndex === 3 && project.category.en === 'Education') ||
               (filterIndex === 4 && project.category.en === 'Commercial');
 
             return categoryMatches && (
-              <div 
+              <div
                 key={index}
                 className="group relative h-[400px] overflow-hidden rounded-sm cursor-pointer bg-slate-200"
               >
                 {/* Image */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
-                
+
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
 
@@ -170,13 +171,17 @@ export default function ProjectGallery() {
             );
           })}
         </div>
-        
+
         <div className="mt-12 text-center">
-          <button className="px-8 py-3 border border-slate-300 text-slate-600 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all font-medium rounded-sm uppercase tracking-wide text-sm">
+          <button
+            onClick={() => setIsGalleryOpen(true)}
+            className="px-8 py-3 border border-slate-300 text-slate-600 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all font-medium rounded-sm uppercase tracking-wide text-sm"
+          >
             {t.btn}
           </button>
         </div>
       </div>
+      <SnapshotsModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />
     </section>
   );
 }
