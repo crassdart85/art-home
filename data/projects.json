@@ -1,0 +1,48 @@
+{
+  "projects": [
+    {
+      "title": { "en": "Coronado North Coast", "ar": "كورونادو الساحل الشمالي" },
+      "category": { "en": "Residential", "ar": "سكنية" },
+      "location": { "en": "Alex-Matrouh Road, Egypt", "ar": "طريق إسكندرية مطروح، مصر" },
+      "description": {
+        "en": "164km coastal development featuring premium chalets and landscape integration.",
+        "ar": "تطوير ساحلي على مساحة 164 كم يضم شاليهات فاخرة وتصميمات طبيعية."
+      },
+      "image": "/projects/coronado.jpg"
+    },
+    {
+      "title": { "en": "Aquarius Resort", "ar": "منتجع أكواريوس" },
+      "category": { "en": "Hospitality", "ar": "ضيافة" },
+      "location": { "en": "Ain Sokhna, Egypt", "ar": "العين السخنة، مصر" },
+      "description": {
+        "en": "5-star hotel with 200 rooms, 650 villas, and commercial complexes.",
+        "ar": "فندق 5 نجوم يضم 200 غرفة و 650 فيلا ومجمعات تجارية."
+      },
+      "image": "/projects/aquarius.jpg"
+    },
+    {
+      "title": { "en": "Sabah Al-Salem University", "ar": "جامعة صباح السالم" },
+      "category": { "en": "Education", "ar": "تعليمية" },
+      "location": { "en": "Kuwait", "ar": "الكويت" },
+      "description": {
+        "en": "Complete fit-out and lecture hall acoustics for the university city.",
+        "ar": "تجهيز كامل وحلول صوتية لقاعات المحاضرات في المدينة الجامعية."
+      },
+      "image": "/projects/university.jpg"
+    },
+    {
+      "title": { "en": "Administrative Capital Bank", "ar": "بنك العاصمة الإدارية" },
+      "category": { "en": "Commercial", "ar": "تجارية" },
+      "location": { "en": "New Capital, Egypt", "ar": "العاصمة الإدارية الجديدة، مصر" },
+      "description": {
+        "en": "High-end wooden cladding and executive office interiors.",
+        "ar": "تكسية خشبية راقية وتصميمات داخلية للمكاتب التنفيذية."
+      },
+      "image": "/projects/bank.jpg"
+    }
+  ],
+  "portfolio": {
+    "file": "/new portfolio.pdf",
+    "label": { "en": "Download Full Portfolio", "ar": "تحميل ملف الأعمال الكامل" }
+  }
+}
