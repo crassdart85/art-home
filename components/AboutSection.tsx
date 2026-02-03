@@ -25,6 +25,16 @@ export default function AboutSection() {
       boardTitle: "Board of Directors",
       boardMembers: [
         {
+          name: "Mr. Mohamed ElShenawy",
+          role: "Owner and CEO",
+          img: "/CEO.jpeg",
+          phone: "",
+          email: "m.elshenawy@arthome.com.eg",
+          quals: [
+            "Businessman and Company Owner"
+          ]
+        },
+        {
           name: "Dr. Eng. Amr Ahmed Elbasiony",
           role: "Executive Director ",
           img: "/exeMD.png",
@@ -56,6 +66,16 @@ export default function AboutSection() {
       // Board Section (Arabic) - Precise Translation
       boardTitle: "مجلس الإدارة",
       boardMembers: [
+        {
+          name: "السيد / محمد الشناوي",
+          role: "المالك والرئيس التنفيذي",
+          img: "/CEO.jpeg",
+          phone: "",
+          email: "m.elshenawy@arthome.com.eg",
+          quals: [
+            "رجل أعمال ومالك الشركة"
+          ]
+        },
         {
           name: "دكتور مهندس / عمرو أحمد بسيوني",
           role: "الرئيس التنفيذي",

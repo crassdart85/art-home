@@ -3,7 +3,18 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const MobileMenu = ({ lang, dict, navLinks }) => {
+interface NavLink {
+  name: string;
+  href: string;
+}
+
+interface MobileMenuProps {
+  lang: string;
+  dict: { switchLang: string; getQuote: string };
+  navLinks: NavLink[];
+}
+
+const MobileMenu = ({ lang, dict, navLinks }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const otherLang = lang === 'en' ? 'ar' : 'en';
 
