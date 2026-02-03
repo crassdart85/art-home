@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Globe } from 'lucide-react';
 // FIX: Import the context correctly
 import { useLanguage } from './LanguageContext';
@@ -9,7 +10,7 @@ import { useLanguage } from './LanguageContext';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // Get language state and the setter from our context
   const { language, setLanguage } = useLanguage();
 
@@ -61,20 +62,21 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white text-slate-900 shadow-md py-3' : 'bg-gradient-to-b from-black/50 to-transparent text-white py-5'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white text-slate-900 shadow-md py-3' : 'bg-gradient-to-b from-black/50 to-transparent text-white py-5'
+        }`}
       // Ensure the navbar direction matches the language
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        
+
         {/* LOGO */}
         <Link href="/" className="relative h-12 w-48 shrink-0">
-          <img 
-            src="/logo.png" 
-            alt="Art Home Logo" 
-            className="h-full w-auto object-contain" 
+          <Image
+            src="/logo.png"
+            alt="Art Home Logo"
+            width={192}
+            height={48}
+            className="h-full w-auto object-contain"
           />
         </Link>
 
@@ -84,35 +86,32 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`transition-colors hover:text-amber-500 ${
-                isScrolled ? 'text-slate-700' : 'text-white/90'
-              }`}
+              className={`transition-colors hover:text-amber-500 ${isScrolled ? 'text-slate-700' : 'text-white/90'
+                }`}
             >
               {link.name}
             </Link>
           ))}
 
           {/* Language Switcher (Desktop) */}
-          <button 
+          <button
             onClick={toggleLanguage}
-            className={`flex items-center gap-2 px-3 py-1 border rounded-full transition-all text-xs uppercase tracking-wider ${
-              isScrolled 
-                ? 'border-slate-300 hover:border-amber-500 hover:text-amber-600' 
+            className={`flex items-center gap-2 px-3 py-1 border rounded-full transition-all text-xs uppercase tracking-wider ${isScrolled
+                ? 'border-slate-300 hover:border-amber-500 hover:text-amber-600'
                 : 'border-white/30 hover:bg-white/10'
-            }`}
+              }`}
           >
             <Globe size={14} />
             {t.langLabel}
           </button>
 
           {/* Call to Action Button */}
-          <Link 
-             href="#contact"
-             className={`px-5 py-2 rounded-sm font-semibold transition-all ${
-               isScrolled 
-                 ? 'bg-amber-600 text-white hover:bg-amber-700' 
-                 : 'bg-white text-slate-900 hover:bg-gray-100'
-             }`}
+          <Link
+            href="#contact"
+            className={`px-5 py-2 rounded-sm font-semibold transition-all ${isScrolled
+                ? 'bg-amber-600 text-white hover:bg-amber-700'
+                : 'bg-white text-slate-900 hover:bg-gray-100'
+              }`}
           >
             {t.quote}
           </Link>
@@ -122,7 +121,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 md:hidden">
           {/* Mobile Lang Switcher */}
           <button onClick={toggleLanguage} className="font-bold text-sm">
-             {language === 'en' ? 'AR' : 'EN'}
+            {language === 'en' ? 'AR' : 'EN'}
           </button>
 
           <button

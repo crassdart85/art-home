@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
@@ -135,10 +136,12 @@ export default function SnapshotsModal({ isOpen, onClose }: SnapshotsModalProps)
                     {/* Image */}
                     <div className="relative w-full h-full flex items-center justify-center">
                         {/* We use standard img tag for simplicity and to ensure it fits contained */}
-                        <img
+                        <Image
                             src={currentImage.src}
                             alt={currentImage.desc[language as 'en' | 'ar']}
-                            className="max-w-full max-h-full object-contain transition-opacity duration-300"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                            className="transition-opacity duration-300"
                         />
                     </div>
 

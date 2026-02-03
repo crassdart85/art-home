@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Target, Eye, ShieldCheck, Gem, Ruler, Users, Phone, Mail } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
@@ -121,10 +122,12 @@ export default function AboutSection() {
               <div key={index} className="bg-slate-50 rounded-sm overflow-hidden shadow-sm border border-slate-100 flex flex-col md:flex-row">
                 {/* Image Section */}
                 <div className="md:w-1/3 relative h-96 md:h-auto">
-                  <img
+                  <Image
                     src={member.img}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top" // object-top helps frame headshots better
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
 

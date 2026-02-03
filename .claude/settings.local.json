@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(vercel --version:*)",
+      "Bash(pip show:*)",
+      "Bash(pip install:*)",
+      "Bash(git rm:*)"
+    ]
+  }
+}

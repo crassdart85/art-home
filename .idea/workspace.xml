@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56e663d2-3469-4af8-84b2-834f0746eaa6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/DOCUMENTATION.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/about/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/about/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/contact/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/contact/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/contact/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/contracting/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/contracting/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/ar/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/components/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/components/MobileMenu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/components/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/contact/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/contracting/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/mining/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/app/real-estate/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/dictionaries/ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/dictionaries/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/eslint.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/lib/dictionary.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/next.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/postcss.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/proxy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/art-home-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/gm-photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/site-logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/updated portofolio.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/tsconfig.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="38I34ebssKHLt08XrnA7FYT7mLp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56e663d2-3469-4af8-84b2-834f0746eaa6" name="Changes" comment="" />
+      <created>1768473070227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768473070227</updated>
+      <workItem from="1768473079526" duration="632000" />
+    </task>
+    <servers />
+  </component>
+</project>
