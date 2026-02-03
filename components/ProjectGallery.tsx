@@ -141,16 +141,6 @@ export default function ProjectGallery() {
           >
             {t.btn}
           </button>
-          <a
-            href={portfolio.file}
-            download="Art_Home_Portfolio.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 bg-amber-600 text-white hover:bg-amber-700 transition-all font-medium rounded-sm uppercase tracking-wide text-sm inline-flex items-center gap-2"
-          >
-            <Download size={18} />
-            {portfolio.label[language]}
-          </a>
         </div>
       </div>
       <SnapshotsModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />
