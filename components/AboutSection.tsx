@@ -69,7 +69,7 @@ export default function AboutSection() {
       boardMembers: [
         {
           name: "السيد / محمد الشناوي",
-          role: "المالك والرئيس التنفيذي",
+          role: "المالك و رئيس مجلس الادارة",
           img: "/CEO.jpeg",
           phone: "",
           email: "m.elshenawy@arthome.com.eg",
