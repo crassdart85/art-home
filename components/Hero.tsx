@@ -7,7 +7,7 @@ import { useLanguage } from './LanguageContext';
 export default function Hero() {
   const { language } = useLanguage();
 
-  const PORTFOLIO_PDF_URL = "https://drive.google.com/file/d/1U_LJIaC4qnXgRe7BEPXJS7yno0Ezye2a/view?usp=sharing";
+  const PORTFOLIO_PDF_URL = "https://drive.google.com/file/d/10LWkHN0m82NkXcfWH39Y3d5yFE4s-LDL/view?usp=sharing";
 
   const content = {
     en: {
@@ -20,13 +20,13 @@ export default function Hero() {
       btnDownload: "Download Portfolio"
     },
     ar: {
-      tagline: "حلول التجهيز والأعمال الخشبية العالمية",
-      titleLine1: "نصنع التميز في",
-      titleLine2: "أدق التفاصيل",
-      desc: "متخصصون في مشاريع الديكور الداخلي الراقية، والأثاث المخصص، والحلول المتكاملة (تسليم مفتاح) في الشرق الأوسط وأفريقيا.",
-      btnProjects: "عرض المشاريع",
-      btnContact: "اتصل بنا",
-      btnDownload: "تحميل البورتفوليو"
+      tagline: "Ø­Ù„ÙˆÙ„ Ø§Ù„ØªØ¬Ù‡ÙŠØ² ÙˆØ§Ù„Ø£Ø¹Ù…Ø§Ù„ Ø§Ù„Ø®Ø´Ø¨ÙŠØ© Ø§Ù„Ø¹Ø§Ù„Ù…ÙŠØ©",
+      titleLine1: "Ù†ØµÙ†Ø¹ Ø§Ù„ØªÙ…ÙŠØ² ÙÙŠ",
+      titleLine2: "Ø£Ø¯Ù‚ Ø§Ù„ØªÙØ§ØµÙŠÙ„",
+      desc: "Ù…ØªØ®ØµØµÙˆÙ† ÙÙŠ Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ù„Ø¯ÙŠÙƒÙˆØ± Ø§Ù„Ø¯Ø§Ø®Ù„ÙŠ Ø§Ù„Ø±Ø§Ù‚ÙŠØ©ØŒ ÙˆØ§Ù„Ø£Ø«Ø§Ø« Ø§Ù„Ù…Ø®ØµØµØŒ ÙˆØ§Ù„Ø­Ù„ÙˆÙ„ Ø§Ù„Ù…ØªÙƒØ§Ù…Ù„Ø© (ØªØ³Ù„ÙŠÙ… Ù…ÙØªØ§Ø­) ÙÙŠ Ø§Ù„Ø´Ø±Ù‚ Ø§Ù„Ø£ÙˆØ³Ø· ÙˆØ£ÙØ±ÙŠÙ‚ÙŠØ§.",
+      btnProjects: "Ø¹Ø±Ø¶ Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹",
+      btnContact: "Ø§ØªØµÙ„ Ø¨Ù†Ø§",
+      btnDownload: "ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø¨ÙˆØ±ØªÙÙˆÙ„ÙŠÙˆ"
     }
   };
 

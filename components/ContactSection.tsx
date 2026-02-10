@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 import { useState } from 'react';
 
@@ -17,21 +17,34 @@ export default function ContactSection() {
       subtitle: "Let's build something exceptional together.",
       desc: "Whether you have a complex fit-out project or need bespoke furniture manufacturing, our global team is ready to assist.",
       egypt: "Egypt HQ",
-      china: "China Office",
+      china: "China (GZ) Head Office",
+      hongKong: "Hong Kong Office",
       phone: "Phone",
+      mobile: "Mobile",
+      fax: "Fax",
+      email: "Email",
       sendMsg: "Send us a message",
-      btn: "Send Message"
+      btn: "Send Message",
+      egyptAddress: "20 ElQods St, 3rd floor, from Shehab Street, Mohandeseen, Cairo, Egypt",
+      chinaAddress: "Room 608, Fubang Center, No.65, Zhongshanqi Road, Guangzhou City, Guangdong",
+      hongKongAddress: "Flat/RM 704, 7/F Bright Way Tower, 33 Mong Kok Road, Mong Kok"
     },
     ar: {
       title: "تواصل معنا",
-      subtitle: "لنبني شيئاً استثنائياً معاً",
+      subtitle: "لنبني شيئًا استثنائيًا معًا",
       desc: "سواء كان لديك مشروع تجهيز معقد أو تحتاج إلى تصنيع أثاث مخصص، فريقنا العالمي مستعد للمساعدة.",
       egypt: "مقر مصر",
       china: "مكتب الصين",
+      hongKong: "مكتب هونغ كونغ",
       phone: "الهاتف",
+      mobile: "الموبايل",
+      fax: "الفاكس",
+      email: "البريد الإلكتروني",
       sendMsg: "أرسل لنا رسالة",
       btn: "إرسال الرسالة",
-      egyptAddress: "20 شارع القدس - المهندسين- القاهرة"
+      egyptAddress: "20 شارع القدس، الطابق الثالث، من شارع شهاب، المهندسين، القاهرة، مصر",
+      chinaAddress: "غرفة 608، مركز فوبانغ، رقم 65، طريق تشونغشانقي، مدينة قوانغتشو، قوانغدونغ",
+      hongKongAddress: "شقة/غرفة 704، الطابق 7، برايت واي تاور، 33 طريق مونغ كوك، مونغ كوك"
     }
   };
 
@@ -69,7 +82,13 @@ export default function ContactSection() {
                 <div>
                   <h4 className="text-xl font-bold mb-1">{t.egypt}</h4>
                   <p className="text-slate-400" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-                    {(language === 'ar' && 'egyptAddress' in t) ? t.egyptAddress : "20 Al-Kods Al-Shreef Street,<br />Mohandseen, Cairo"}
+                    {t.egyptAddress}
+                  </p>
+                  <p className="text-slate-400 mt-2" dir="ltr">
+                    {t.mobile}: +20 122533269
+                  </p>
+                  <p className="text-slate-400" dir="ltr">
+                    {t.email}: info@arthome.com.eg
                   </p>
                 </div>
               </div>
@@ -81,18 +100,34 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-1">{t.china}</h4>
-                  <p className="text-slate-400">Room 608, West Point Center,<br />Guangzhou</p>
+                  <p className="text-slate-400" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+                    {t.chinaAddress}
+                  </p>
+                  <p className="text-slate-400 mt-2" dir="ltr">
+                    {t.phone}: +86 20 81686833
+                  </p>
+                  <p className="text-slate-400" dir="ltr">
+                    {t.fax}: +86 20 81686844
+                  </p>
+                  <p className="text-slate-400" dir="ltr">
+                    {t.mobile}: +86 13527770747
+                  </p>
                 </div>
               </div>
 
-              {/* Phone */}
+              {/* Hong Kong Office */}
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-white/5 rounded-sm flex items-center justify-center text-amber-500 shrink-0">
-                  <Phone />
+                  <MapPin />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-1">{t.phone}</h4>
-                  <p className="text-slate-400" dir="ltr">+20 233459690</p>
+                  <h4 className="text-xl font-bold mb-1">{t.hongKong}</h4>
+                  <p className="text-slate-400" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+                    {t.hongKongAddress}
+                  </p>
+                  <p className="text-slate-400 mt-2" dir="ltr">
+                    {t.mobile}: +86 13416224656
+                  </p>
                 </div>
               </div>
             </div>
