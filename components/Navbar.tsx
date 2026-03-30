@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -31,15 +31,15 @@ export default function Navbar() {
       projects: 'Projects',
       contact: 'Contact',
       quote: 'Get Quote',
-      langLabel: 'العربية' // Label to switch TO Arabic
+      langLabel: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©' // Label to switch TO Arabic
     },
     ar: {
-      home: 'الرئيسية',
-      about: 'من نحن',
-      sectors: 'قطاعات العمل',
-      projects: 'المشاريع',
-      contact: 'اتصل بنا',
-      quote: 'اطلب عرض سعر',
+      home: 'Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©',
+      about: 'Ù…Ù† Ù†Ø­Ù†',
+      sectors: 'Ù‚Ø·Ø§Ø¹Ø§Øª Ø§Ù„Ø¹Ù…Ù„',
+      projects: 'Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹',
+      contact: 'Ø§ØªØµÙ„ Ø¨Ù†Ø§',
+      quote: 'Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø³Ø¹Ø±',
       langLabel: 'English' // Label to switch TO English
     }
   };

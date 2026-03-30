@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { MapPin, ArrowUpRight, Download } from 'lucide-react';
@@ -19,10 +19,10 @@ export default function ProjectGallery() {
       filters: ['All', 'Hospitality', 'Residential', 'Education', 'Commercial']
     },
     ar: {
-      sub: "أعمال مختارة",
-      title: "مشاريع مميزة",
-      btn: "عرض مشاريع اخرى",
-      filters: ['الكل', 'ضيافة', 'سكنية', 'تعليمية', 'تجارية']
+      sub: "Ø£Ø¹Ù…Ø§Ù„ Ù…Ø®ØªØ§Ø±Ø©",
+      title: "Ù…Ø´Ø§Ø±ÙŠØ¹ Ù…Ù…ÙŠØ²Ø©",
+      btn: "Ø¹Ø±Ø¶ Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ø®Ø±Ù‰",
+      filters: ['Ø§Ù„ÙƒÙ„', 'Ø¶ÙŠØ§ÙØ©', 'Ø³ÙƒÙ†ÙŠØ©', 'ØªØ¹Ù„ÙŠÙ…ÙŠØ©', 'ØªØ¬Ø§Ø±ÙŠØ©']
     }
   };
 

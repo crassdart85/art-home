@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 // FIX: Import from the correct single source of truth using '@'
 import { LanguageProvider } from "@/components/LanguageContext";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Art Home International Group",
@@ -18,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {/* Wrap the entire app in the provider so all components can access the language */}
         <LanguageProvider>
           {children}
