@@ -85,7 +85,7 @@ export default function ContactSection() {
                     {t.egyptAddress}
                   </p>
                   <p className="text-slate-400 mt-2" dir="ltr">
-                    {t.mobile}: +20 122533269
+                    {t.mobile}: +20 12 22533269
                   </p>
                   <p className="text-slate-400" dir="ltr">
                     {t.email}: info@arthome.com.eg
