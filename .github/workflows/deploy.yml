@@ -34,5 +34,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
           publish_branch: deploy
-          force_orphan: true
           commit_message: 'deploy: ${{ github.event.head_commit.message }}'
