@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/$USER/public_html/
-    - /bin/cp -r $CPANEL_BASE_INSTALL_PATH/out/. $DEPLOYPATH
+    - /bin/cp -r $CPANEL_BASE_INSTALL_PATH/. $DEPLOYPATH
