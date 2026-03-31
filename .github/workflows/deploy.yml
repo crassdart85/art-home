@@ -25,6 +25,9 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Copy .cpanel.yml into build output
+        run: cp .cpanel.yml out/.cpanel.yml
+
       - name: Deploy out/ to deploy branch
         uses: peaceiris/actions-gh-pages@v4
         with:
