@@ -1,5 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$USER/public_html/
-    - /bin/cp -r $CPANEL_BASE_INSTALL_PATH/. $DEPLOYPATH
+    - export DEPLOYPATH=/home/$USER/repositories/art-home
+    - cd $DEPLOYPATH
+    - source /home/$USER/nodevenv/repositories/art-home/22/bin/activate
+    - npm install --production=false
+    - npm run build
+    - touch $DEPLOYPATH/tmp/restart.txt
