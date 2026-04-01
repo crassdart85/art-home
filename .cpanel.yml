@@ -1,8 +1,5 @@
 ---
 deployment:
   tasks:
-    - source /home/$USER/nodevenv/repositories/art-home-deploy/22/bin/activate
-    - cd $CPANEL_BASE_INSTALL_PATH
-    - npm install --production=false
-    - npm run build
-    - touch $CPANEL_BASE_INSTALL_PATH/tmp/restart.txt
+    - export DEPLOYPATH=/home/$USER/public_html/
+    - /bin/cp -r $CPANEL_BASE_INSTALL_PATH/out/. $DEPLOYPATH
