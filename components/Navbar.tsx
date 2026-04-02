@@ -93,8 +93,8 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* Language Switcher (Desktop) */}
-          <button
+          {/* Language Switcher (Desktop) - hidden until Arabic encoding is fixed */}
+          {/* <button
             onClick={toggleLanguage}
             className={`flex items-center gap-2 px-3 py-1 border rounded-full transition-all text-xs uppercase tracking-wider ${isScrolled
                 ? 'border-slate-300 hover:border-amber-500 hover:text-amber-600'
@@ -103,7 +103,7 @@ export default function Navbar() {
           >
             <Globe size={14} />
             {t.langLabel}
-          </button>
+          </button> */}
 
           {/* Call to Action Button */}
           <Link
@@ -119,10 +119,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          {/* Mobile Lang Switcher */}
-          <button onClick={toggleLanguage} className="font-bold text-sm">
+          {/* Mobile Lang Switcher - hidden until Arabic encoding is fixed */}
+          {/* <button onClick={toggleLanguage} className="font-bold text-sm">
             {language === 'en' ? 'AR' : 'EN'}
-          </button>
+          </button> */}
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
