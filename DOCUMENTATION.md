@@ -18,6 +18,8 @@
 10. [Deployment to egyhosting.com (cPanel)](#10-deployment-to-egyhostingcom-cpanel)
 11. [Common Tasks Cheatsheet](#11-common-tasks-cheatsheet)
 
+> **Live site:** https://arthome.com.eg
+
 ---
 
 ## 1. Project Overview
@@ -360,15 +362,12 @@ For individual elements that should always be left-to-right (like phone numbers)
 
 ## 10. Deployment to egyhosting.com (cPanel)
 
-### How deployment works
+### How it works
 
-The site uses **cPanel Git Version Control** to deploy automatically from GitHub.
+The site is a **static export** — `npm run build` generates a plain HTML/CSS/JS site in the `out/` folder. This folder is committed to GitHub and deployed to `public_html` on the server via cPanel Git Version Control.
 
-When you click **"Deploy HEAD Commit"** in cPanel, it reads [.cpanel.yml](.cpanel.yml) and runs these steps:
-1. Sets the deploy path to `/home/arthomec/public_html/`
-2. Copies all files from the `out/` folder into `public_html/`
-
-This is why the `out/` folder **must be committed to GitHub** — cPanel copies files from the repo, not from your local machine.
+**Server:** egyhosting.com shared hosting — cPanel username `arthomec`
+**Live URL:** https://arthome.com.eg
 
 ### Deployment workflow (every time you make a change)
 
@@ -378,29 +377,28 @@ This is why the `out/` folder **must be committed to GitHub** — cPanel copies 
 # 2. Rebuild the static site
 npm run build
 
-# 3. Stage your changes (including the rebuilt out/ folder)
+# 3. Commit everything including the rebuilt out/ folder
 git add .
-
-# 4. Commit
 git commit -m "describe what you changed"
 
-# 5. Push to both branches
+# 4. Push to GitHub
 git push origin master
 git push origin master:main
 ```
 
 Then in cPanel (egyhosting.com):
 1. Go to **cPanel → Git Version Control**
-2. Find the `art-home` repository
+2. Find the `art-home` repository (at `repositories/art-home-deploy`)
 3. Click **"Pull or Deploy"** tab
-4. Click **"Update from Remote"** — waits for the latest commit to be fetched
-5. Click **"Deploy HEAD Commit"** — copies files to your live site
+4. Click **"Update from Remote"** — pulls the latest commit
+5. Click **"Deploy HEAD Commit"** — copies `out/` files to `public_html`
 
 ### Important notes
 
-- The cPanel is set to track the **`main`** branch. Always push to `main`.
-- The `out/` folder is committed to the repo on purpose — do not add it back to `.gitignore`.
-- The `.claude/settings.local.json` file is gitignored — this is fine and expected.
+- The `out/` folder is committed to the repo on purpose — the server cannot build Next.js (not enough RAM on shared hosting).
+- Always rebuild locally before committing.
+- The `.claude/settings.local.json` file is gitignored — this is expected.
+- Arabic text in source files must be saved as **UTF-8**. If Arabic appears garbled on the live site, the fix is to rebuild `out/` and redeploy.
 
 ---
 
