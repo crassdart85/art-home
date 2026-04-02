@@ -28,7 +28,7 @@ export default function Home() {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
           <p>
             {language === 'en' 
-              ? 'Â© 2026 Art Home International Group. All rights reserved.' 
+              ? '© 2026 Art Home International Group. All rights reserved.'
               : 'Â© 2026 Ù…Ø¬Ù…ÙˆØ¹Ø© Ø¢Ø±Øª Ù‡ÙˆÙ… Ø§Ù„Ø¯ÙˆÙ„ÙŠØ©. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.'}
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">

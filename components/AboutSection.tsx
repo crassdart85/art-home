@@ -43,8 +43,8 @@ export default function AboutSection() {
 
           email: "amr.elbasiony@arthome.com.eg",
           quals: [
-            "Doctorate of Business Administration (DBA) â€“ AASTMT â€“ Smart Village, Egypt",
-            "Master Degree in Business Administration â€“ Quality Management (MQM) â€“ AASTMT",
+            “Doctorate of Business Administration (DBA) — AASTMT — Smart Village, Egypt”,
+            “Master Degree in Business Administration — Quality Management (MQM) — AASTMT”,
 
           ]
         }
