@@ -31,15 +31,15 @@ export default function Navbar() {
       projects: 'Projects',
       contact: 'Contact',
       quote: 'Get Quote',
-      langLabel: 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©' // Label to switch TO Arabic
+      langLabel: 'العربية' // Label to switch TO Arabic
     },
     ar: {
-      home: 'Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©',
-      about: 'Ù…Ù† Ù†Ø­Ù†',
-      sectors: 'Ù‚Ø·Ø§Ø¹Ø§Øª Ø§Ù„Ø¹Ù…Ù„',
-      projects: 'Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹',
-      contact: 'Ø§ØªØµÙ„ Ø¨Ù†Ø§',
-      quote: 'Ø§Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø³Ø¹Ø±',
+      home: 'الرئيسية',
+      about: 'من نحن',
+      sectors: 'قطاعات العمل',
+      projects: 'المشاريع',
+      contact: 'اتصل بنا',
+      quote: 'اطلب عرض سعر',
       langLabel: 'English' // Label to switch TO English
     }
   };
@@ -93,8 +93,8 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* Language Switcher (Desktop) - hidden until Arabic encoding is fixed */}
-          {/* <button
+          {/* Language Switcher (Desktop) */}
+          <button
             onClick={toggleLanguage}
             className={`flex items-center gap-2 px-3 py-1 border rounded-full transition-all text-xs uppercase tracking-wider ${isScrolled
                 ? 'border-slate-300 hover:border-amber-500 hover:text-amber-600'
@@ -103,7 +103,7 @@ export default function Navbar() {
           >
             <Globe size={14} />
             {t.langLabel}
-          </button> */}
+          </button>
 
           {/* Call to Action Button */}
           <Link
@@ -119,10 +119,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          {/* Mobile Lang Switcher - hidden until Arabic encoding is fixed */}
-          {/* <button onClick={toggleLanguage} className="font-bold text-sm">
+          {/* Mobile Lang Switcher */}
+          <button onClick={toggleLanguage} className="font-bold text-sm">
             {language === 'en' ? 'AR' : 'EN'}
-          </button> */}
+          </button>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

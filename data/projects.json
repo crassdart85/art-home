@@ -1,78 +1,78 @@
-﻿{
+{
   "projects": [
     {
       "title": {
         "en": "Coronado North Coast",
-        "ar": "ÙƒÙˆØ±ÙˆÙ†Ø§Ø¯Ùˆ Ø§Ù„Ø³Ø§Ø­Ù„ Ø§Ù„Ø´Ù…Ø§Ù„ÙŠ"
+        "ar": "كورونادو الساحل الشمالي"
       },
       "category": {
         "en": "Residential",
-        "ar": "Ø³ÙƒÙ†ÙŠØ©"
+        "ar": "سكنية"
       },
       "location": {
         "en": "Alex-Matrouh Road, Egypt",
-        "ar": "Ø·Ø±ÙŠÙ‚ Ø¥Ø³ÙƒÙ†Ø¯Ø±ÙŠØ© Ù…Ø·Ø±ÙˆØ­ØŒ Ù…ØµØ±"
+        "ar": "طريق إسكندرية مطروح، مصر"
       },
       "description": {
         "en": "164km coastal development featuring premium chalets and landscape integration.",
-        "ar": "ØªØ·ÙˆÙŠØ± Ø³Ø§Ø­Ù„ÙŠ Ø¹Ù„Ù‰ Ù…Ø³Ø§Ø­Ø© 164 ÙƒÙ… ÙŠØ¶Ù… Ø´Ø§Ù„ÙŠÙ‡Ø§Øª ÙØ§Ø®Ø±Ø© ÙˆØªØµÙ…ÙŠÙ…Ø§Øª Ø·Ø¨ÙŠØ¹ÙŠØ©."
+        "ar": "تطوير ساحلي على مساحة 164 كم يضم شاليهات فاخرة وتصميمات طبيعية."
       },
       "image": "/projects/coronado.jpg"
     },
     {
       "title": {
         "en": "Aquarius Resort",
-        "ar": "Ù…Ù†ØªØ¬Ø¹ Ø£ÙƒÙˆØ§Ø±ÙŠÙˆØ³"
+        "ar": "منتجع أكواريوس"
       },
       "category": {
         "en": "Hospitality",
-        "ar": "Ø¶ÙŠØ§ÙØ©"
+        "ar": "ضيافة"
       },
       "location": {
         "en": "Ain Sokhna, Egypt",
-        "ar": "Ø§Ù„Ø¹ÙŠÙ† Ø§Ù„Ø³Ø®Ù†Ø©ØŒ Ù…ØµØ±"
+        "ar": "العين السخنة، مصر"
       },
       "description": {
         "en": "5-star hotel with 200 rooms, 650 villas, and commercial complexes.",
-        "ar": "ÙÙ†Ø¯Ù‚ 5 Ù†Ø¬ÙˆÙ… ÙŠØ¶Ù… 200 ØºØ±ÙØ© Ùˆ 650 ÙÙŠÙ„Ø§ ÙˆÙ…Ø¬Ù…Ø¹Ø§Øª ØªØ¬Ø§Ø±ÙŠØ©."
+        "ar": "فندق 5 نجوم يضم 200 غرفة و 650 فيلا ومجمعات تجارية."
       },
       "image": "/projects/aquarius.jpg"
     },
     {
       "title": {
         "en": "Sabah Al-Salem University",
-        "ar": "Ø¬Ø§Ù…Ø¹Ø© ØµØ¨Ø§Ø­ Ø§Ù„Ø³Ø§Ù„Ù…"
+        "ar": "جامعة صباح السالم"
       },
       "category": {
         "en": "Education",
-        "ar": "ØªØ¹Ù„ÙŠÙ…ÙŠØ©"
+        "ar": "تعليمية"
       },
       "location": {
         "en": "Kuwait",
-        "ar": "Ø§Ù„ÙƒÙˆÙŠØª"
+        "ar": "الكويت"
       },
       "description": {
         "en": "Complete fit-out and lecture hall acoustics for the university city.",
-        "ar": "ØªØ¬Ù‡ÙŠØ² ÙƒØ§Ù…Ù„ ÙˆØ­Ù„ÙˆÙ„ ØµÙˆØªÙŠØ© Ù„Ù‚Ø§Ø¹Ø§Øª Ø§Ù„Ù…Ø­Ø§Ø¶Ø±Ø§Øª ÙÙŠ Ø§Ù„Ù…Ø¯ÙŠÙ†Ø© Ø§Ù„Ø¬Ø§Ù…Ø¹ÙŠØ©."
+        "ar": "تجهيز كامل وحلول صوتية لقاعات المحاضرات في المدينة الجامعية."
       },
       "image": "/projects/university.jpg"
     },
     {
       "title": {
         "en": "Administrative Capital Bank",
-        "ar": "Ø¨Ù†Ùƒ Ø§Ù„Ø¹Ø§ØµÙ…Ø© Ø§Ù„Ø¥Ø¯Ø§Ø±ÙŠØ©"
+        "ar": "بنك العاصمة الإدارية"
       },
       "category": {
         "en": "Commercial",
-        "ar": "ØªØ¬Ø§Ø±ÙŠØ©"
+        "ar": "تجارية"
       },
       "location": {
         "en": "New Capital, Egypt",
-        "ar": "Ø§Ù„Ø¹Ø§ØµÙ…Ø© Ø§Ù„Ø¥Ø¯Ø§Ø±ÙŠØ© Ø§Ù„Ø¬Ø¯ÙŠØ¯Ø©ØŒ Ù…ØµØ±"
+        "ar": "العاصمة الإدارية الجديدة، مصر"
       },
       "description": {
         "en": "High-end wooden cladding and executive office interiors.",
-        "ar": "ØªÙƒØ³ÙŠØ© Ø®Ø´Ø¨ÙŠØ© Ø±Ø§Ù‚ÙŠØ© ÙˆØªØµÙ…ÙŠÙ…Ø§Øª Ø¯Ø§Ø®Ù„ÙŠØ© Ù„Ù„Ù…ÙƒØ§ØªØ¨ Ø§Ù„ØªÙ†ÙÙŠØ°ÙŠØ©."
+        "ar": "تكسية خشبية راقية وتصميمات داخلية للمكاتب التنفيذية."
       },
       "image": "/projects/bank.jpg"
     }
@@ -81,7 +81,7 @@
     "file": "https://drive.google.com/uc?export=download&id=1U_LJIaC4qnXgRe7BEPXJS7yno0Ezye2a",
     "label": {
       "en": "Download Full Portfolio",
-      "ar": "ØªØ­Ù…ÙŠÙ„ Ù…Ù„Ù Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ Ø§Ù„ÙƒØ§Ù…Ù„"
+      "ar": "تحميل ملف الأعمال الكامل"
     }
   }
 }

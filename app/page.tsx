@@ -29,7 +29,7 @@ export default function Home() {
           <p>
             {language === 'en' 
               ? '© 2026 Art Home International Group. All rights reserved.'
-              : 'Â© 2026 Ù…Ø¬Ù…ÙˆØ¹Ø© Ø¢Ø±Øª Ù‡ÙˆÙ… Ø§Ù„Ø¯ÙˆÙ„ÙŠØ©. Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©.'}
+              : '© 2026 مجموعة آرت هوم الدولية. جميع الحقوق محفوظة.'}
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <span>{language === 'en' ? 'Privacy Policy' : 'Ø³ÙŠØ§Ø³Ø© Ø§Ù„Ø®ØµÙˆØµÙŠØ©'}</span>
